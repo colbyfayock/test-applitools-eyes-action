@@ -1,3 +1,3 @@
 # test-applitools-eyes-action
 
-6
+7
