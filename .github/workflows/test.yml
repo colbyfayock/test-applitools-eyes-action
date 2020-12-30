@@ -15,4 +15,4 @@ jobs:
       with:
         APPLITOOLS_API_KEY: ${{secrets.APPLITOOLS_API_KEY}}
         appName: Space Jelly Shop
-        baseUrl: https://spacejelly.dev/
+        baseUrl: https://spacejelly.dev/#/cart
