@@ -49,3 +49,4 @@ jobs:
         appName: 'Australia Post'
         baseUrl: https://auspost.com.au/shop/
         concurrency: 5
+        maxDepth: 3
