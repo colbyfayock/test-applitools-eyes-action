@@ -38,3 +38,14 @@ jobs:
         APPLITOOLS_API_KEY: ${{secrets.APPLITOOLS_API_KEY}}
         appName: 'Next.js WordPress Starter'
         sitemapUrl: https://next-wordpress-starter.netlify.app/sitemap.xml
+
+  large:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: colbyfayock/applitools-eyes-action@main
+      with:
+        APPLITOOLS_API_KEY: ${{secrets.APPLITOOLS_API_KEY}}
+        appName: 'Australia Post'
+        baseUrl: https://auspost.com.au/shop/
+        concurrency: 5
