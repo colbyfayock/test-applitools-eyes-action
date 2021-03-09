@@ -48,5 +48,5 @@ jobs:
         APPLITOOLS_API_KEY: ${{secrets.APPLITOOLS_API_KEY}}
         appName: 'Australia Post'
         baseUrl: https://auspost.com.au/shop/
-        concurrency: 5
+        concurrency: 20
         maxDepth: 3
