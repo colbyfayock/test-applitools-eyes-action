@@ -51,5 +51,17 @@ jobs:
         APPLITOOLS_API_KEY: ${{secrets.APPLITOOLS_API_KEY}}
         appName: 'Australia Post'
         baseUrl: https://auspost.com.au/shop/
+        maxDepth: 2
+
+
+  largeconcurrency:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: colbyfayock/applitools-eyes-action@main
+      with:
+        APPLITOOLS_API_KEY: ${{secrets.APPLITOOLS_API_KEY}}
+        appName: 'Australia Post'
+        baseUrl: https://auspost.com.au/shop/
         concurrency: 20
-        maxDepth: 3
+        maxDepth: 2
