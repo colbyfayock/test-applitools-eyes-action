@@ -17,6 +17,7 @@ jobs:
         APPLITOOLS_API_KEY: ${{secrets.APPLITOOLS_API_KEY}}
         appName: Space Jelly Shop
         baseUrl: https://spacejelly.dev
+        concurrency: 20
         
   depth:
     runs-on: ubuntu-latest
@@ -28,6 +29,7 @@ jobs:
         appName: Space Jelly Shop
         baseUrl: https://spacejelly.dev
         maxDepth: 2
+        concurrency: 20
 
   sitemap:     
     runs-on: ubuntu-latest
@@ -38,3 +40,28 @@ jobs:
         APPLITOOLS_API_KEY: ${{secrets.APPLITOOLS_API_KEY}}
         appName: 'Next.js WordPress Starter'
         sitemapUrl: https://next-wordpress-starter.netlify.app/sitemap.xml
+        concurrency: 20
+
+  large:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: colbyfayock/applitools-eyes-action@main
+      with:
+        APPLITOOLS_API_KEY: ${{secrets.APPLITOOLS_API_KEY}}
+        appName: 'Australia Post'
+        baseUrl: https://auspost.com.au/shop/
+        maxDepth: 2
+
+
+  largeconcurrency:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: colbyfayock/applitools-eyes-action@main
+      with:
+        APPLITOOLS_API_KEY: ${{secrets.APPLITOOLS_API_KEY}}
+        appName: 'Australia Post'
+        baseUrl: https://auspost.com.au/shop/
+        concurrency: 20
+        maxDepth: 2
